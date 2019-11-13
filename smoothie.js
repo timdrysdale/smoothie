@@ -243,7 +243,7 @@
     // We must always keep one expired data point as we need this to draw the
     // line that comes into the chart from the left, but any points prior to that can be removed.
     var removeCount = 0;
-    while (this.data.length - removeCount >= maxDataSetLength && this.data[removeCount + 1][0] < oldestValidTime) {
+    while (this.data.length - removeCount >= maxDataSetLength && (this.data[removeCount + 1][0] < oldestValidTime || isNaN(this.data[removeCount + 1][0]))){
       removeCount++;
     }
     if (removeCount !== 0) {
