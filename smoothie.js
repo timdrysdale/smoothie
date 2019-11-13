@@ -93,6 +93,7 @@
  *        next to value, by @jackdesert (#102)
  *        Fix bug rendering issue in series fill when using scroll backwards, by @olssonfredrik
  *        Add title option, by @mesca
+ *        Fix stoppage in dropOldData when time is NaN, by @timdrydsale (#114)
  */
 
 ;(function(exports) {
